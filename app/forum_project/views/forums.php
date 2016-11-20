@@ -14,10 +14,7 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
+      <img src="../../assets/Logo.png" class="img-responsive">
     </div>
     <div class="col-sm-4">
       aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
