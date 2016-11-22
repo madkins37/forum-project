@@ -14,14 +14,71 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <img src="../../assets/Logo.png" class="img-responsive">
+      <form id="forumInfo" method="post" enctype="multipart/form-data" action="forums/submit" class="form-horizontal" role="form">
+				<div class="row">
+					<div class="col-sm-1">
+						<label for="title" class="control-label">
+							Title
+						</label>
+					</div>
+					<div class="col-sm-11">
+						<input
+							type="text"
+							name="title"
+							class="form-control"
+							id="title"
+							required
+							data-validation-required-message="All entries must have a title."
+							value=""
+						>
+					</div>
+				</div>
+        <br>
+				<div class="row">
+					<div class="col-sm-2">
+						<label for="title" class="control-label">
+							Description
+						</label>
+					</div>
+					<div class="col-sm-10">
+						<textarea
+							name="description"
+							class="form-control"
+							rows="3"
+							required
+							data-validation-required-message="Description is required."
+							id="description"
+						>
+						</textarea>
+					</div>
+				</div>
+      </form>
     </div>
     <div class="col-sm-4">
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
-      aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg aksjdhf isbfiqo elid lgl aheo oid labeko oallle odqlnibg 
+      <div class="panel panel-default phone">
+				<div class="panel-heading">
+					Your Account
+				</div>
+				<div class="panelText" style="margin-left: 2em">
+					<br>
+					[ ] Your account name and logo
+					<br>
+					<br>
+				</div>
+				<br>
+				<div class="panel-heading">
+					Existing Forums
+				</div>
+				<div class="panelText" style="margin-left: 2em">
+					<br>
+					-> Existing Forum <br>
+					-> Existing Forum <br>
+					-> Existing Forum
+					<br>
+					<br>
+				</div>
+			</div>
+    </div>
   </div>
-</div>
 </body>
 </html>
