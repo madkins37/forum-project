@@ -5,7 +5,7 @@ class Forum extends CI_Controller {
   
 	public function index()
 	{
-		$query = $this->db->select('forumTitle, forumDescription, userName, forumDateCreated')
+		$query = $this->db->select('forumID, forumTitle, forumDescription, userName, forumDateCreated')
 											->from('forums')
 											->join('users','userID = forumPrimaryAdminID')
 											->get();
@@ -13,6 +13,23 @@ class Forum extends CI_Controller {
 		$result = $query->result();
 
 		$data = array(
+			'forums' => $result
+		);
+		$this->load->view('forums',$data);
+	}
+
+	public function view($id)
+	{
+		$query = $this->db->select('forumTitle, forumDescription, userName, forumDateCreated')
+											->from('forums')
+											->join('users','userID = forumPrimaryAdminID')
+											->where('forumID = '.$id)
+											->get();
+
+		$result = $query->result();
+
+		$data = array(
+			'id' => $id,
 			'forums' => $result
 		);
 		$this->load->view('forums',$data);

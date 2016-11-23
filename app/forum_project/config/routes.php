@@ -57,3 +57,6 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home';
 $route['forum'] = 'forum';
 $route['user'] = 'user';
+$route['topic'] = 'topic';
+
+$route['forum/view/(:num)'] = 'forum/view/$1';
