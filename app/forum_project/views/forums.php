@@ -13,33 +13,14 @@ include("header.html");
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-8">
-      List of Forums shows up here!
-    </div>
-    <div class="col-sm-4">
-      <div class="panel panel-default phone">
-				<div class="panel-heading">
-					Your Account
-				</div>
-				<div class="panelText" style="margin-left: 2em">
-					<br>
-					[ ] Your account name and logo
-					<br>
-					<br>
-				</div>
-				<div class="panel-heading">
-					Existing Forums
-				</div>
-				<div class="panelText" style="margin-left: 2em">
-					<br>
-					-> Existing Forum <br>
-					-> Existing Forum <br>
-					-> Existing Forum
-					<br>
-					<br>
-				</div>
+    <div class="col-sm-12">
+      <div id="forumsList">
 			</div>
     </div>
+    <div class="col-sm-0">
+      
+    </div>
   </div>
+	<?php include("../scripts/forumsScript.php") ?>
 </body>
 </html>

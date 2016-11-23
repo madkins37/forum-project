@@ -5,7 +5,17 @@ class Forum extends CI_Controller {
   
 	public function index()
 	{
-		$this->load->view('forums');
+		$query = $this->db->select('forumTitle, forumDescription, userName, forumDateCreated')
+											->from('forums')
+											->join('users','userID = forumPrimaryAdminID')
+											->get();
+
+		$result = $query->result();
+
+		$data = array(
+			'forums' => $result
+		);
+		$this->load->view('forums',$data);
 	}
 
 	public function create()
