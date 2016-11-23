@@ -3,7 +3,7 @@ var username = "<?php echo $_SESSION['username'] ?>";
 var userMenu = document.getElementById("userMenu");
 
 console.log(username);
-if (username=="davidBlaine2") {
+if (username!="") {
   userMenu.innerHTML = 
       "<li class='dropdown'>" +
         "<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>" + username + "<span class='caret'></span></a>" +

@@ -21,12 +21,17 @@ class User extends CI_Controller {
       'userId' => 0,
       'userName' => $username,
       'userPassword' => sha1($password),
-      'userDateCreated' => 0,
       'userType' => "A"
     );
-    
+    $this->db->set('userDateCreated', 'NOW()', FALSE);
     $this->db->insert('users', $data);
 
+    $newdata = array(
+      'username'  => $username,
+      'logged_in' => TRUE
+    );
+    $this->session->set_userdata($newdata);
+    $this->load->helper('url');
     redirect('home', 'refresh');
 
   }
