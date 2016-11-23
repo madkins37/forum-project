@@ -6,7 +6,7 @@ include("header.html");
 <head>
   
 	<meta charset="utf-8">
-	<title>Forums</title>
+	<title>Login</title>
 
 </head>
 <body>
@@ -14,17 +14,17 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form id="forumInfo" method="post" enctype="multipart/form-data" action="forums/submit" class="form-horizontal" role="form">
+      <form id="forumInfo" method="post" enctype="multipart/form-data" action="user/login" class="form-horizontal" role="form">
 				<div class="row">
-					<div class="col-sm-1">
+					<div class="col-sm-2">
 						<label for="title" class="control-label">
-							Title
+							Username
 						</label>
 					</div>
-					<div class="col-sm-11">
+					<div class="col-sm-4">
 						<input
 							type="text"
-							name="title"
+							name="username"
 							class="form-control"
 							id="title"
 							required
@@ -32,25 +32,25 @@ include("header.html");
 							value=""
 						>
 					</div>
-				</div>
-        <br>
-				<div class="row">
 					<div class="col-sm-2">
 						<label for="title" class="control-label">
-							Description
+							Password
 						</label>
 					</div>
-					<div class="col-sm-10">
-						<textarea
-							name="description"
+					<div class="col-sm-4">
+						<input
+							type="text"
+							name="password"
 							class="form-control"
 							rows="3"
 							required
 							data-validation-required-message="Description is required."
 							id="description"
 						>
-						</textarea>
 					</div>
+				</div>
+        <br>
+				<div class="row">
 				</div>
 				<br>
 				<div class="row">
@@ -60,7 +60,7 @@ include("header.html");
 							Cancel
 						</a>
 						<button type="submit" id="formSubmit" class="btn btn-success">
-							Save Your Tour
+							Login
 							<i class="glyphicon glyphicon-chevron-right"></i>
 						</button>
 					</div>

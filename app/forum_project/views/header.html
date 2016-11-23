@@ -6,11 +6,11 @@ $baseUrl = base_url();
 ?>
 <head>
 	<meta charset="utf-8">
-	<title>Welcome to CodeIgniter</title>
+	<title>MODA Forums</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
 
 
@@ -56,20 +56,11 @@ $baseUrl = base_url();
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
         </form>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Link</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Your Account<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Recent</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
-          </li>
+        <ul id="userMenu" class="nav navbar-nav navbar-right">
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
   <script type="text/javascript">$('.dropdown-toggle').dropdown();</script>
+  <?php include("../scripts/header.php") ?>
 </head>
