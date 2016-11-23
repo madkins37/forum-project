@@ -1,8 +1,8 @@
+<?php
 class Topic_model extends CI_Model {
 
         public function __construct()
         {
-                // Call the CI_Model constructor
                 parent::__construct();
         }
 
@@ -16,3 +16,4 @@ class Topic_model extends CI_Model {
           return $query->result();
         }
 }
+?>
