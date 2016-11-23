@@ -20,6 +20,10 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+		$this->load->model('topic');
+
+		$data['topics'] = $this->topic->get_all_topics();
+
+		$this->load->view('home', $topics);
 	}
 }
