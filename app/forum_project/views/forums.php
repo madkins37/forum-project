@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-include("header.html");
+include("header.php");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
