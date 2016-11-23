@@ -4,7 +4,7 @@ include("header.html");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-
+  
 	<meta charset="utf-8">
 	<title>Login</title>
 
@@ -14,7 +14,7 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form id="forumInfo" method="post" enctype="multipart/form-data" action="login" class="form-horizontal" role="form">
+      <form id="forumInfo" method="post" enctype="multipart/form-data" action="user/login" class="form-horizontal" role="form">
 				<div class="row">
 					<div class="col-sm-2">
 						<label for="title" class="control-label">
@@ -55,7 +55,7 @@ include("header.html");
 				<br>
 				<div class="row">
 					<div class="pull-right">
-						<a href="home" class="btn btn-danger">
+						<a href="<?php echo $baseUrl ?>home" class="btn btn-danger">
 							<i class="glyphicon glyphicon-remove"></i>
 							Cancel
 						</a>

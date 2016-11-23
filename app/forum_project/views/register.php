@@ -4,7 +4,7 @@ include("header.html");
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
-
+  
 	<meta charset="utf-8">
 	<title>Register</title>
 
@@ -14,7 +14,7 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form id="forumInfo" method="post" enctype="multipart/form-data" action="create" class="form-horizontal" role="form">
+      <form id="forumInfo" method="post" enctype="multipart/form-data" action="<?php echo $baseUrl ?>user/create" class="form-horizontal" role="form">
 				<div class="row">
 					<div class="col-sm-2">
 						<label for="title" class="control-label">
