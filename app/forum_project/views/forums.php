@@ -14,58 +14,7 @@ include("header.html");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form id="forumInfo" method="post" enctype="multipart/form-data" action="forums/submit" class="form-horizontal" role="form">
-				<div class="row">
-					<div class="col-sm-1">
-						<label for="title" class="control-label">
-							Title
-						</label>
-					</div>
-					<div class="col-sm-11">
-						<input
-							type="text"
-							name="title"
-							class="form-control"
-							id="title"
-							required
-							data-validation-required-message="All entries must have a title."
-							value=""
-						>
-					</div>
-				</div>
-        <br>
-				<div class="row">
-					<div class="col-sm-2">
-						<label for="title" class="control-label">
-							Description
-						</label>
-					</div>
-					<div class="col-sm-10">
-						<textarea
-							name="description"
-							class="form-control"
-							rows="3"
-							required
-							data-validation-required-message="Description is required."
-							id="description"
-						>
-						</textarea>
-					</div>
-				</div>
-				<br>
-				<div class="row">
-					<div class="pull-right">
-						<a href="<?php echo $baseUrl ?>home" class="btn btn-danger">
-							<i class="glyphicon glyphicon-remove"></i>
-							Cancel
-						</a>
-						<button type="submit" id="formSubmit" class="btn btn-success">
-							Save Your Tour
-							<i class="glyphicon glyphicon-chevron-right"></i>
-						</button>
-					</div>
-				</div>
-      </form>
+      List of Forums shows up here!
     </div>
     <div class="col-sm-4">
       <div class="panel panel-default phone">
