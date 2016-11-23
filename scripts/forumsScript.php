@@ -7,7 +7,9 @@
     forumsList.innerHTML+=
       "<div class='panel panel-default'>" +
         "<div class='panel-heading'>" +
-          forum.forumTitle +
+          "<a href='#'>" +
+            forum.forumTitle +
+          "</a>" +
           "<div class='pull-right'>" +
             "<small>Created By: " + forum.userName + "</small>" +
           "</div>" +
