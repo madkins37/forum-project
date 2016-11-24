@@ -60,3 +60,4 @@ $route['user'] = 'user';
 $route['topic'] = 'topic';
 
 $route['forum/view/(:num)'] = 'forum/view/$1';
+$route['(:any)'] = 'home';
