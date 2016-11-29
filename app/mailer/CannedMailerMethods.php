@@ -4,7 +4,7 @@ require 'Mailer.php';
 
 function newUserMail($toEmailAddress, $toUserName) {
 
-return myMail($toEmailAddress, $toUserName, "Thanks for Registering," .  $toUserName . "!", "Thanks for registering on our forum. We hope you enjoy your stay!");
+return myMail($toEmailAddress, $toUserName, "Thanks for Registering, " .  $toUserName . "!", "Thanks for registering on our forum. We hope you enjoy your stay!");
 
 }
 
