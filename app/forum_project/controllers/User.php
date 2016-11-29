@@ -16,12 +16,14 @@ class User extends CI_Controller {
   {
     $username = $this->input->post('username');
 		$password = $this->input->post('password');
+    $email = $this->input->post('email');
 
     $data = array(
       'userId' => 0,
       'userName' => $username,
       'userPassword' => sha1($password),
-      'userType' => "A"
+      'userType' => "U",
+      'userEmail' => $email
     );
     $this->db->set('userDateCreated', 'NOW()', FALSE);
     $this->db->insert('users', $data);

@@ -39,8 +39,27 @@ include("header.php");
 					</div>
 					<div class="col-sm-4">
 						<input
-							type="text"
+							type="password"
 							name="password"
+							class="form-control"
+							rows="3"
+							required
+							data-validation-required-message="Description is required."
+							id="description"
+						>
+					</div>
+				</div>
+				<br>
+				<div class='row'>
+					<div class="col-sm-2">
+						<label for="title" class="control-label">
+							Email
+						</label>
+					</div>
+					<div class="col-sm-4">
+						<input
+							type="text"
+							name="email"
 							class="form-control"
 							rows="3"
 							required
