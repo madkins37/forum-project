@@ -85,10 +85,10 @@ CREATE TABLE comments (
 # Then Comments
 
 INSERT INTO users VALUES
-(1, 'Olivia', AES_ENCRYPT('SecretSalt', 'Olivia'), NOW(), 'A', "milam33@marshall.edu"),
-(2, 'Mark', AES_ENCRYPT('SecretSalt', 'Mark'), NOW(), 'A', "markadki37@gmail.com"),
-(3, 'David', AES_ENCRYPT('SecretSalt', 'David'), NOW(), 'A', "wingfield4@live.marshall.edu"),
-(4, 'Andrew', AES_ENCRYPT('SecretSalt', 'Andrew'), NOW(), 'U', "what@Imnotsure.cool");
+(1, 'Olivia', SHA1('Olivia'), NOW(), 'A', "milam33@marshall.edu"),
+(2, 'Mark', SHA1('Mark'), NOW(), 'A', "markadki37@gmail.com"),
+(3, 'David', SHA1('David'), NOW(), 'A', "wingfield4@live.marshall.edu"),
+(4, 'Andrew', SHA1('Andrew'), NOW(), 'U', "what@Imnotsure.cool");
 
 INSERT INTO forums VALUES
 (1,2,"Our Crazy PHP Life", "PHP is the way to be", NOW());
