@@ -1,5 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+require './mailer/CannedMailerMethods.php';
+
 
 class User extends CI_Controller {
   public function index()
@@ -27,6 +29,8 @@ class User extends CI_Controller {
     );
     $this->db->set('userDateCreated', 'NOW()', FALSE);
     $this->db->insert('users', $data);
+
+    newUserMail($email, $username);
 
     $newdata = array(
       'username'  => $username,
