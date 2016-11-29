@@ -1,5 +1,5 @@
 <script>
-var username = "<?php echo $_SESSION['username'] ?>";
+var username = "<?php echo empty($_SESSION['username']) ? "" : $_SESSION['username'] ?>";
 var userMenu = document.getElementById("userMenu");
 
 console.log(username);
