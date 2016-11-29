@@ -9,6 +9,7 @@ CREATE TABLE users (
   userPassword     VARCHAR(255)   NOT NULL,
   userDateCreated    DATETIME       NOT NULL  DEFAULT NOW(),
   userType        VARCHAR(1)       NOT NULL,
+  userEmail       VARCHAR(100)     NOT NULL,
 
   PRIMARY KEY (userID)
 );
@@ -43,13 +44,13 @@ CREATE TABLE topics (
 
 
 CREATE TABLE threads (
-  threadID        		INT(11)        NOT NULL   AUTO_INCREMENT,
-  threadTitle			VARCHAR(255)       NOT NULL,
-  threadDescription		VARCHAR(255)       NOT NULL,
-  threadDateCreated      DATETIME       NOT NULL	DEFAULT NOW(),
-  threadTopicID      	INT(11)  		 NOT NULL,
-  threadUserID			 INT(11)   		NOT NULL,
-  threadFeatured		TINYINT(1)		NOT NULL,
+  threadID            INT(11)        NOT NULL   AUTO_INCREMENT,
+  threadTitle     VARCHAR(255)       NOT NULL,
+  threadDescription   VARCHAR(255)       NOT NULL,
+  threadDateCreated      DATETIME       NOT NULL  DEFAULT NOW(),
+  threadTopicID       INT(11)      NOT NULL,
+  threadUserID       INT(11)      NOT NULL,
+  threadFeatured    TINYINT(1)    NOT NULL,
 
   FOREIGN KEY (threadTopicID) REFERENCES topics(topicID) ON DELETE CASCADE,
   FOREIGN KEY (threadUserID) REFERENCES users(userID),
@@ -60,13 +61,13 @@ CREATE TABLE threads (
 
 
 
-CREATE TABLE comments (	
-  commentID        		INT(11)       	 NOT NULL   AUTO_INCREMENT,
-  commentUserID     	INT(11)          NOT NULL,
-  commentThreadID      	INT(11)    		 NOT NULL,
-  commentDateCreated	DATETIME		 NOT NULL	DEFAULT NOW(),
-  commentContent		VARCHAR(255)	 NOT NULL,
-  commentReplyID		INT(11)			,
+CREATE TABLE comments ( 
+  commentID           INT(11)          NOT NULL   AUTO_INCREMENT,
+  commentUserID       INT(11)          NOT NULL,
+  commentThreadID       INT(11)        NOT NULL,
+  commentDateCreated  DATETIME     NOT NULL DEFAULT NOW(),
+  commentContent    VARCHAR(255)   NOT NULL,
+  commentReplyID    INT(11)     ,
 
   FOREIGN KEY (commentUserID) REFERENCES users(userID),
   FOREIGN KEY (commentThreadID) REFERENCES threads(threadID) ON DELETE CASCADE,
@@ -84,10 +85,10 @@ CREATE TABLE comments (
 # Then Comments
 
 INSERT INTO users VALUES
-(1, 'Olivia', AES_ENCRYPT('SecretSalt', 'Olivia'), NOW(), 'A'),
-(2, 'Mark', AES_ENCRYPT('SecretSalt', 'Mark'), NOW(), 'A'),
-(3, 'David', AES_ENCRYPT('SecretSalt', 'David'), NOW(), 'A'),
-(4, 'Andrew', AES_ENCRYPT('SecretSalt', 'Andrew'), NOW(), 'U');
+(1, 'Olivia', AES_ENCRYPT('SecretSalt', 'Olivia'), NOW(), 'A', "milam33@marshall.edu"),
+(2, 'Mark', AES_ENCRYPT('SecretSalt', 'Mark'), NOW(), 'A', "markadki37@gmail.com"),
+(3, 'David', AES_ENCRYPT('SecretSalt', 'David'), NOW(), 'A', "wingfield4@live.marshall.edu"),
+(4, 'Andrew', AES_ENCRYPT('SecretSalt', 'Andrew'), NOW(), 'U', "what@Imnotsure.cool");
 
 INSERT INTO forums VALUES
 (1,2,"Our Crazy PHP Life", "PHP is the way to be", NOW());
@@ -114,5 +115,5 @@ INSERT INTO comments VALUES
 (9,3,1,NOW(),'News story!', NULL),
 (10,3,2,NOW(),'Another new story about angry cats:', NULL);
 
-GRANT ALL PRIVILEGES ON forum.* To 'phpAppConnection' IDENTIFIED BY 'phpAppConnection';
+GRANT ALL PRIVILEGES ON forum.* To 'phpAppConnection'@'localhost' IDENTIFIED BY 'phpAppConnection';
 
