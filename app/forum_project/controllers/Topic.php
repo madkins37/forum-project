@@ -29,9 +29,9 @@ class Topic extends CI_Controller {
   {
     $this->load->model("Thread_model");
     $this->load->model("Topic_model");
-    $data["topic"] = $this->Topic_model->get_topic($topicID)
+    $data["topic"] = $this->Topic_model->get_topic($topicID);
     $data["threads"] = $this->Thread_model->get_all_threads($topicID);
-    $this->load->view->('topic', $data);
+    $this->load->view('topic', $data);
   }
 
 }

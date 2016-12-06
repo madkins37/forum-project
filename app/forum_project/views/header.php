@@ -24,13 +24,13 @@ $baseUrl = '/forum-project/app/';
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo $baseUrl ?>home">Home</a>
+        <a class="navbar-brand" href="<?php echo $baseUrl ?>main/">Home</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li><a href="#">Placeholder</a></li>
+<!--           <li><a href="#">Placeholder</a></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Forums<span class="caret"></span></a>
             <ul class="dropdown-menu">
@@ -41,14 +41,11 @@ $baseUrl = '/forum-project/app/';
               <li role="separator" class="divider"></li>
               <li><a href="<?php echo $baseUrl ?>forum/create">Create New</a></li>
             </ul>
-          </li>
+          </li> -->
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Topics<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Placeholder</a></li>
-              <li><a href="#">Placeholder</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">View All</a></li>
+              <li><a href="<?php echo $baseUrl ?>main/topics/">View All</a></li>
             </ul>
           </li>
         </ul>
