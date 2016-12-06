@@ -85,7 +85,7 @@ include("header.php");
 					</div>
 				</div>
       </form>
-    </div>
+<!--     </div>
     <div class="col-sm-4">
       <div class="panel panel-default phone">
 				<div class="panel-heading">
@@ -110,6 +110,6 @@ include("header.php");
 				</div>
 			</div>
     </div>
-  </div>
+  </div> -->
 </body>
 </html>

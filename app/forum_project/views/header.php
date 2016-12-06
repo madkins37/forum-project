@@ -52,12 +52,12 @@ $baseUrl = '/forum-project/app/';
             </ul>
           </li>
         </ul>
-        <form class="navbar-form navbar-left">
+<!--         <form class="navbar-form navbar-left">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">
           </div>
           <button type="submit" class="btn btn-default">Submit</button>
-        </form>
+        </form> -->
         <ul id="userMenu" class="nav navbar-nav navbar-right">
         </ul>
       </div><!-- /.navbar-collapse -->
