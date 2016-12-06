@@ -6,6 +6,16 @@ class Topic_model extends CI_Model {
                 parent::__construct();
         }
 
+        public function get_topic_title($topicID)
+        {
+          $query = $this->db->select('topicTitle')
+                            ->from('topics')
+                            ->where("topicID = 'intval($topicID)'")
+                            ->get();
+                            
+          return $query->result();
+        }
+
         public function get_all_topics()
         {
           $query = $this->db->select('topicTitle, topicDescription, userName, topicDateCreated')

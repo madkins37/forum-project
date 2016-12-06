@@ -57,7 +57,24 @@ $route['translate_uri_dashes'] = FALSE;
 $route['home'] = 'home';
 $route['forum'] = 'forum';
 $route['user'] = 'user';
-$route['topic'] = 'topic';
+$route['topic/(:num)'] = 'topic';
+
+//Shows forum
+$route['main'] = 'main';
+//Shows topics in forum
+$route['main/topics'] = 'maintopics';
+//Shows threads for a specific topic. num is topic id
+$route['main/topics/(:num)'] = 'maintopicsdetail';
+//Shows comments. num is thread id
+$route['main/topics/thread/(:num)'] = 'mainthread';
+
+
+
+
+
+
+
 
 $route['forum/view/(:num)'] = 'forum/view/$1';
+
 $route['(:any)'] = 'home';

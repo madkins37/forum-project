@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Topic extends CI_Controller {
-  
+
 	public function index()
 	{
     $id = $this->input->get('id');
@@ -17,12 +17,21 @@ class Topic extends CI_Controller {
 
 		$result = $query->result();
 
-    $forumTitle = array_values($result)[0]->forumTitle; 
+    $forumTitle = array_values($result)[0]->forumTitle;
 		$data = array(
 			'topics' => $result,
       'forumTitle' => $forumTitle
 		);
 		$this->load->view('topics',$data);
 	}
+
+  public function topic($topicID)
+  {
+    $this->load->model("Thread_model");
+    $this->load->model("Topic_model");
+    $data["topic"] = $this->Topic_model->get_topic($topicID);
+    $data["threads"] = $this->Thread_model->get_all_threads($topicID);
+    $this->load->view('topic', $data);
+  }
 
 }

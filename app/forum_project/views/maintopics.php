@@ -5,24 +5,24 @@ include("header.php");
 <html lang="en">
 <head>
   
-	<meta charset="utf-8">
-	<title>Forums</title>
+  <meta charset="utf-8">
+  <title>Topics</title>
 
 </head>
 <body>
 <div class="container">
-	<div class="page-header">
-		<h1>Available Forums <small>For your reading pleasurea</small></h1>
-	</div>
+  <div class="page-header">
+    <h1>Available Topics <small></small></h1>
+  </div>
   <div class="row">
     <div class="col-sm-12">
-      <div id="forumsList">
-			</div>
+      <div id="topicsList">
+      </div>
     </div>
     <div class="col-sm-0">
       
     </div>
   </div>
-	<?php include("../scripts/viewForumScript.php") ?>
+  <?php include("../scripts/mainTopicsScript.php") ?>
 </body>
 </html>

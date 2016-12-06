@@ -15,7 +15,7 @@ CREATE TABLE users (
 );
 
 CREATE TABLE forums (
-  forumID             INT(11)        NOT NULL   AUTO_INCREMENT,
+  forumID                 INT(11)        NOT NULL   AUTO_INCREMENT,
   forumPrimaryAdminID       INT(11)            NOT NULL,
   forumTitle            VARCHAR(255)       NOT NULL,
   forumDescription      VARCHAR(255)    NOT NULL,
@@ -84,6 +84,9 @@ CREATE TABLE comments (
 # Then Threads
 # Then Comments
 
+GRANT ALL PRIVILEGES ON forum.* To 'phpAppConnection'@'localhost' IDENTIFIED BY 'phpAppConnection';
+
+
 INSERT INTO users VALUES
 (1, 'Olivia', SHA1('Olivia'), NOW(), 'A', "milam33@marshall.edu"),
 (2, 'Mark', SHA1('Mark'), NOW(), 'A', "markadki37@gmail.com"),
@@ -109,11 +112,25 @@ INSERT INTO comments VALUES
 (5,3,2,NOW(),'Another new story about angry cats:', NULL);
 
 INSERT INTO comments VALUES
-(6,1,1,NOW(),'Look at this cat: http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg', NULL),
-(7,2,1,NOW(),'Wow!', 1),
-(8,4,1,NOW(),'Amazing!', 1),
-(9,3,1,NOW(),'News story!', NULL),
+(6,1,2,NOW(),'Look at this cat: http://www.rd.com/wp-content/uploads/sites/2/2016/04/01-cat-wants-to-tell-you-laptop.jpg', NULL),
+(7,2,2,NOW(),'Wow!', 6),
+(8,4,2,NOW(),'Amazing!', 6),
+(9,3,2,NOW(),'News story!', NULL),
 (10,3,2,NOW(),'Another new story about angry cats:', NULL);
 
-GRANT ALL PRIVILEGES ON forum.* To 'phpAppConnection'@'localhost' IDENTIFIED BY 'phpAppConnection';
+
+INSERT INTO topics VALUES
+(2, 'Dogs', 'All about your favorite pals!', NOW(), 1, 1);
+
+INSERT INTO threads VALUES
+(3, 'Woof', 'Dogs take over the Internet', NOW(), 2, 1, 1);
+
+INSERT INTO comments VALUES
+(11,3,3,NOW(), 'I adopted a dog today', NULL),
+(12,2,3,NOW(),'Wow!', 11),
+(13,4,3,NOW(),'Amazing!', 12),
+(14,3,3,NOW(),'News story!', NULL),
+(15,3,3,NOW(),'Another new story about dogs:', NULL);
+
+
 

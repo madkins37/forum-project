@@ -9,7 +9,7 @@ include("header.php");
 </head>
 <body>
 
-<div class="container-fluid">
+<div class="container">
 	<h1>Generic Forum Name!</h1>
 
 	<?php foreach($topics as $key=>$value) { ?>
