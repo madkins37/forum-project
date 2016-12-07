@@ -19,7 +19,7 @@ class Maintopicsdetail extends CI_Controller {
 
 		$data = array(
 			'threads' => $result,
-      		'topicID' => $topicID
+      'topicID' => $topicID
 		);
 		$this->load->view('maintopicsdetail',$data);
 	}

@@ -12,7 +12,7 @@ include("header.php");
 <body>
 <div class="container">
   <div class="page-header">
-    <h1>Available Topics <small></small></h1>
+    <h1>Your thread has been created!<small></small></h1>
   </div>
   <div class="row">
     <div class="col-sm-12">
@@ -25,6 +25,5 @@ include("header.php");
   </div>
   <div class="row">
   </div>
-  <?php include("../scripts/mainTopicsScript.php") ?>
 </body>
 </html>

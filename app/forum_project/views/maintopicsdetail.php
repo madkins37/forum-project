@@ -21,6 +21,13 @@ include("header.php");
     <div class="col-sm-12">
       <div id="threadsList">
       </div>
+      <div class='panel panel-default'>
+      <div class='panel-heading'>
+        <a href='<?php echo $baseUrl?>mainthread/create/<?php echo $topicID ?>'>
+          Create a Thread <span class="glyphicon glyphicon-plus pull-right" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
     </div>
     <div class="col-sm-0">
       
