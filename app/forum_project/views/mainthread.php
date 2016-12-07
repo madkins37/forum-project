@@ -90,17 +90,20 @@ $replies = $commentModel->get_replies($threadID, $comment['commentID']);
     <div class="col-sm-12">
       <div id="reply">
       </div>
-      <form id="threadComment" method="post" enctype="multipart/form-data" action="<?php echo $baseUrl ?>mainthread/submitComment/<?php echo $threadID ?>" class="form-horizontal" role="form">
-        <input type="hidden" id = "hiddenReply" name="replyID" value="" />
-        <input type="hidden" name="threadID" value="<?php echo $threadID ?>" />
-        <textarea id="wysihtml5-textarea" name="comment" class="form-control" id="sources" rows="4" placeholder="Leave a comment...">
-        </textarea>
-        <br>
-        <button type="submit" id="formSubmit" class="btn btn-success pull-right">
-          Post
-          <i class="glyphicon glyphicon-ok"></i>
-        </button>
-      </form>
+      <?php if(empty($_SESSION['username']) ? "" : $_SESSION['username'] != "") { ?>
+        <form id="threadComment" method="post" enctype="multipart/form-data" action="<?php echo $baseUrl ?>mainthread/submitComment/<?php echo $threadID ?>" class="form-horizontal" role="form">
+          <input type="hidden" id = "hiddenReply" name="replyID" value="" />
+          <input type="hidden" name="threadID" value="<?php echo $threadID ?>" />
+          <textarea id="wysihtml5-textarea" name="comment" class="form-control" id="sources" rows="4" placeholder="Leave a comment..."></textarea>
+          <br>
+          <button type="submit" id="formSubmit" class="btn btn-success pull-right">
+            Post
+            <i class="glyphicon glyphicon-ok"></i>
+          </button>
+        </form>
+      <?php } else {?>
+        <a href="<?php echo $baseUrl ?>user"><small>Sign in to leave a comment!</small></a>
+      <?php } ?>
     </div>
     <div class="col-sm-0">
     </div>
@@ -108,13 +111,13 @@ $replies = $commentModel->get_replies($threadID, $comment['commentID']);
 
 <script>
   function replyTo(userName,commentID) {
-    var replyElement = document.getElementById('reply');
-    replyElement.innerHTML = "<small>Replying to "+userName+"<small><a href='javascript:void(0);' onclick='cancelReply()'> cancel</a>";
+    <?php if(empty($_SESSION['username']) ? "" : $_SESSION['username'] != "") { ?>
+      var replyElement = document.getElementById('reply');
+      replyElement.innerHTML = "<small>Replying to "+userName+"<small><a href='javascript:void(0);' onclick='cancelReply()'> cancel</a>";
 
-    var replyInput = document.getElementById('hiddenReply');
-    replyInput.value = commentID;
-
-    console.log(commentID);
+      var replyInput = document.getElementById('hiddenReply');
+      replyInput.value = commentID;
+    <?php } ?>
     window.scrollTo(0,document.body.scrollHeight);
     return false;
   }
@@ -129,6 +132,5 @@ $replies = $commentModel->get_replies($threadID, $comment['commentID']);
     return false;
   }
 </script>
-
 </body>
 </html>

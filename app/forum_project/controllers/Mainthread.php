@@ -40,11 +40,17 @@ class Mainthread extends CI_Controller {
 
   public function create() 
   {
-    $topicID =  $this->uri->segment(3);
-    $this->load->helper('url');
-    $this->load->view('createThread', array(
-      'topicID' => $topicID
-    ));
+    $user = empty($_SESSION['username']) ? "" : $_SESSION['username'];
+
+    if($user == "") {
+      $this->load->view('pleaseSignIn');
+    } else {
+      $topicID =  $this->uri->segment(3);
+      $this->load->helper('url');
+      $this->load->view('createThread', array(
+        'topicID' => $topicID
+      ));
+    }
   }
 
   public function submit()
