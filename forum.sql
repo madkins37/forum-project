@@ -132,5 +132,7 @@ INSERT INTO comments VALUES
 (14,3,3,NOW(),'News story!', NULL),
 (15,3,3,NOW(),'Another new story about dogs:', NULL);
 
+ALTER TABLE `comments`
+  CHANGE COLUMN `commentContent` `commentContent` VARCHAR(7000);
 
 
