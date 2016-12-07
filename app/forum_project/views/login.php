@@ -39,7 +39,7 @@ include("header.php");
 					</div>
 					<div class="col-sm-4">
 						<input
-							type="text"
+							type="password"
 							name="password"
 							class="form-control"
 							rows="3"

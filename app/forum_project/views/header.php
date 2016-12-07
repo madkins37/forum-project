@@ -8,9 +8,11 @@ $baseUrl = '/forum-project/app/';
 	<meta charset="utf-8">
 	<title>MODA Forums</title>
 
+ 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="../css/main.css">
+  
   <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
 
 
@@ -24,7 +26,7 @@ $baseUrl = '/forum-project/app/';
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo $baseUrl ?>main/">Home</a>
+        <a class="navbar-brand" href="<?php echo $baseUrl ?>">Home</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

@@ -14,7 +14,7 @@ include("header.php");
 <div class="container">
   <div class="row">
     <div class="col-sm-8">
-      <form id="forumInfo" method="post" enctype="multipart/form-data" action="<?php echo $baseUrl ?>forum/submit" class="form-horizontal" role="form">
+      <form id="forumInfo" method="post" enctype="multipart/form-data" action="<?php echo $baseUrl ?>mainthread/submit/<?php echo $topicID ?>" class="form-horizontal" role="form">
 				<div class="row">
 					<div class="col-sm-1">
 						<label for="title" class="control-label">
