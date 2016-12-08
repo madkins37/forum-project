@@ -10,20 +10,31 @@ include("header.php");
 <body>
 
 <div class="container">
-	<h1>Generic Forum Name!</h1>
+	<h1>Most Recent Threads</h1>
 
-	<?php foreach($topics as $key=>$value) { ?>
+	<?php foreach($threads as $key=>$value) { ?>
 	<div class="row">
 		<div class="col-xs-12">
-			<div class="panel panel-primary">
-				<div class="panel-heading"><?php echo $value->topicTitle; ?></div>
-				<div class="panel-body"><?php echo $value->topicDescription; ?></div>
-			</div>
+			<div class='panel panel-default'>
+        <div class='panel-heading'>
+          <a href='<?php echo $baseUrl?>main/topics/thread/<?php echo $value->threadID ?>'>
+            <?php echo $value->threadTitle; ?>
+          </a>
+          <div class='pull-right'>
+            <small>thread started: <?php echo $value->threadDateCreated; ?></small>
+          </div>
+        </div>
+        <div class='panelText' style='margin-left: 2em; margin-right: 2em'>
+          <br>
+          <?php echo $value->threadDescription; ?>
+          <br><br>
+        </div>
+      </div>
 		</div>
 	</div>
 	<?php } ?>
 
-	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
+	<?php include("footer.html"); ?>
 </div>
 </body>
 </html>

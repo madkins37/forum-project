@@ -4,7 +4,7 @@ var userMenu = document.getElementById("userMenu");
 
 console.log(username);
 if (username!="") {
-  userMenu.innerHTML = 
+  userMenu.innerHTML =
       "<li class='dropdown'>" +
         "<a href='#' class='dropdown-toggle' data-toggle='dropdown' role='button' aria-haspopup='true' aria-expanded='false'>" + username + "<span class='caret'></span></a>" +
         "<ul class='dropdown-menu'>" +
@@ -12,7 +12,7 @@ if (username!="") {
         "</ul>" +
       "</li>";
 } else {
-  userMenu.innerHTML = 
+  userMenu.innerHTML =
     "<li><a href='<?php echo $baseUrl ?>user/register'>Register</a></li>" +
     "<li><a href='<?php echo $baseUrl ?>user'>Sign In</a></li>";
 }

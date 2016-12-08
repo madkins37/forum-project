@@ -20,9 +20,9 @@ class Home extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->model('Topic_model');
+		$this->load->model('Thread_model');
 
-		$data['topics'] = $this->Topic_model->get_all_topics();
+		$data['threads'] = $this->Thread_model->get_most_recent();
 
 		$this->load->view('home', $data);
 	}

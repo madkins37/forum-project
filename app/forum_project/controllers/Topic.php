@@ -25,12 +25,16 @@ class Topic extends CI_Controller {
 		$this->load->view('topics',$data);
 	}
 
-  public function topic($topicID)
+  public function view()
   {
+		$topicID = $this->uri->segment(2);
+
     $this->load->model("Thread_model");
     $this->load->model("Topic_model");
-    $data["topic"] = $this->Topic_model->get_topic($topicID);
-    $data["threads"] = $this->Thread_model->get_all_threads($topicID);
+    $data = array(
+				'topic' => $this->Topic_model->get_topic_title($topicID),
+    		'threads' => $this->Thread_model->get_all_threads($topicID)
+		);
     $this->load->view('topic', $data);
   }
 

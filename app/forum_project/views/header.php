@@ -3,16 +3,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $this->load->helper('url');
 $baseUrl = '/forum-project/app/';
+$cssPath = '/forum-project/css/main.css';
 ?>
 <head>
 	<meta charset="utf-8">
 	<title>MODA Forums</title>
 
- 
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="../css/main.css">
-  
+  <link rel="stylesheet" href="<?php echo $cssPath; ?>">
+
   <link rel="stylesheet" href="https://bootswatch.com/flatly/bootstrap.min.css">
 
 
@@ -51,6 +52,9 @@ $baseUrl = '/forum-project/app/';
             </ul>
           </li>
         </ul>
+				<ul class="nav navbar-nav" style="margin-left: 50vh;">
+					<p class="navbar-brand" style="font-size: 36px;">Generic Forum Name</p>
+				</ul>
 <!--         <form class="navbar-form navbar-left">
           <div class="form-group">
             <input type="text" class="form-control" placeholder="Search">

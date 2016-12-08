@@ -10,15 +10,15 @@ class Topic_model extends CI_Model {
         {
           $query = $this->db->select('topicTitle')
                             ->from('topics')
-                            ->where("topicID = 'intval($topicID)'")
+                            ->where('topicID = ' .$topicID)
                             ->get();
-                            
+
           return $query->result();
         }
 
         public function get_all_topics()
         {
-          $query = $this->db->select('topicTitle, topicDescription, userName, topicDateCreated')
+          $query = $this->db->select('topicID, topicTitle, topicDescription, userName, topicDateCreated')
       											->from('topics')
       											->join('users','userID = topicCreatedByUserID')
       											->get();
